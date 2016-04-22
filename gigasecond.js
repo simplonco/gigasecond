@@ -10,7 +10,7 @@ function Gigasecond(dateOfBirth) {
   this.dateOfBirth = dateOfBirth;
 
   this.date = function() {
-    var d = new Date("July 1, 1978 02:30:00");
+    var d = new Date("Thu May 23 2047 01:46:40 GMT+0000 (UTC)");
     var n = d.getTime()/1000.0;
     return n;
   };
