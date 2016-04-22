@@ -10,9 +10,9 @@ function Gigasecond(dateOfBirth) {
   this.dateOfBirth = dateOfBirth;
 
   this.date = function() {
-    var d = new Date();
-    var n = d.getMilliseconds();
-    return n*(10**9);
+    var d = new Date("July 1, 1978 02:30:00");
+    var n = d.getTime()/1000.0;
+    return n;
   };
 }
 
