@@ -12,7 +12,7 @@ function Gigasecond(dateOfBirth) {
   this.date = function() {
     var d = new Date();
     var n = d.getMilliseconds();
-    return n*1000;
+    return n;
   };
 }
 
