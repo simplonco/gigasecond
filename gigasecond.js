@@ -10,9 +10,12 @@ function Gigasecond(dateOfBirth) {
   this.dateOfBirth = dateOfBirth;
 
   this.date = function() {
-    var d = new Date("Thu May 23 2047 01:46:40 GMT+0000 (UTC)");
-    var n = d.getTime()/1000.0;
-    return n;
+    var d = new Date();
+    var n = d.getDate()/1000;
+    if ((n-dateOfBirth) == 1000000000){
+      return "GS BirthDay";
+    }
+         
   };
 }
 
