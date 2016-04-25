@@ -5,17 +5,17 @@
 // expected here.
 
 function Gigasecond(dateOfBirth) {
-  'use strict';
+    'use strict';
 
-  this.dateOfBirth = dateOfBirth;
+    this.dateOfBirth = dateOfBirth;
 
-  this.date = function() {
+    this.date = function() {
         var gigasecondDate = new Date(dateOfBirth.getTime() + 1000000000000);
-            gigaBirthday.setSeconds(0);
-            gigaBirthday.setMinutes(0);
-            gigaBirthday.setHours(0);
-            return gigasecondDate;
-        };
-    }
+        gigasecondDate.setSeconds(0);
+        gigasecondDate.setMinutes(0);
+        gigasecondDate.setHours(0);
+        return gigasecondDate;
+    };
+}
 
 module.exports = Gigasecond;
