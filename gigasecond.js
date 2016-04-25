@@ -11,7 +11,7 @@ function Gigasecond(dateOfBirth) {
 
     this.date = function() {
         Gigasecond.prototype.date = function() {
-            var birthSeconds = this.dateOfBirth.getTime();
+            var birthSeconds = this.date.getTime();
             var seconds = birthSeconds + 1000000000000;
             var result = new Date(seconds);
             result.setHours(0);
