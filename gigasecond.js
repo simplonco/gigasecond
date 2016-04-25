@@ -9,7 +9,7 @@ function Gigasecond(dateOfBirth) {
 
   this.dateOfBirth = dateOfBirth;
 
-  this.dateOfBirthday = function() {
+  this.date = function() {
     Gigasecond.prototype.date = function() {
       var anniversary = new Date(Date.parse(this.dateOfBirthday) + Math.pow(10,12))
       anniversary.setHours(0);
