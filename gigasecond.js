@@ -11,9 +11,8 @@ function Gigasecond(dateOfBirth) {
 
   this.date = function() {
     var d = new Date();
-    var n = d.getSeconds();
-    if ((n-dateOfBirth) === 1000000000){
-      return "GS BirthDay";
+    var n = d.getMilliseconds();
+    return n*1000000;
     }
          
   };
