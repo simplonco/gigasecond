@@ -8,8 +8,8 @@ function Gigasecond(dateOfBirth) {
   'use strict';
 
   this.dateOfBirth = dateOfBirth;
+}
 
-  this.date = function() {
   Gigasecond.prototype.date = function() {
   var gs = Math.pow(10, 9);
   var days = Math.ceil(((gs / 60) / 60) / 24);
@@ -19,8 +19,6 @@ function Gigasecond(dateOfBirth) {
   results.setMinutes(0);
   results.setHours(0);
   return results;
-};
-  };
 };
 
 module.exports = Gigasecond;
