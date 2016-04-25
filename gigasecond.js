@@ -4,21 +4,19 @@
 // Make sure to look at test.script.js--that should give you some hints about what is
 // expected here.
 
-function Gigasecond(dateOfBirth) {
-  'use strict';
-
-  this.dateOfBirth = dateOfBirth;
+function Gigasecond(date) {
+    this.birthday = date;
 }
 
-  Gigasecond.prototype.date = function() {
-  var gs = Math.pow(10, 9);
-  var days = Math.ceil(((gs / 60) / 60) / 24);
-  var finalDate = this.birthday.setTime(this.dateOfBirthday.getTime() + days * 86400000);
-  var results = new Date(finalDate);
-  results.setSeconds(0);
-  results.setMinutes(0);
-  results.setHours(0);
-  return results;
-};
+Gigasecond.prototype.date = function () {
+    var birthSeconds = this.birthday.getTime();
+    var seconds = birthSeconds + 1000000000000;
+    var result = new Date(seconds);
+    result.setHours(0);
+    result.setMinutes(0);
+    result.setSeconds(0);
+    result.setMilliseconds(0);
+    return result;
+}
 
 module.exports = Gigasecond;
