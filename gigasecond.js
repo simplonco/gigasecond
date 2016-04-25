@@ -4,9 +4,9 @@
 // Make sure to look at test.script.js--that should give you some hints about what is
 // expected here.
 
-function Gigasecond(dateOfBirthday) {
-    this.dateOfBirthday = function() {
-        var gigaBirthday = new Date(dateOfBirthday.getTime() + 1000000000000);
+function Gigasecond(birthday) {
+    this.date = function() {
+        var gigaBirthday = new Date(birthday.getTime() + 1000000000000);
         gigaBirthday.setSeconds(0);
         gigaBirthday.setMinutes(0);
         gigaBirthday.setHours(0);
