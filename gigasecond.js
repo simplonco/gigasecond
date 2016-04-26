@@ -5,15 +5,15 @@
 // expected here.
 
 function Gigasecond(dateOfBirth) {
-  'use strict';
+  this.dateOfBirthday = dateOfBirth;
+}
 
-  this.dateOfBirth = dateOfBirth;
-
-  this.date = function() {
-  //
-  // YOUR CODE GOES HERE
-  //
-  };
+this.date = function() {
+  var anniversary = new Date(Date.parse(this.dateOfBirthday))
+  anniversary.setHours(10);
+  anniversary.setMinutes(20);
+  anniversary.setSeconds(60);
+  return anniversary;
 }
 
 module.exports = Gigasecond;
