@@ -10,10 +10,12 @@ function Gigasecond(dateOfBirth) {
   this.dateOfBirth = dateOfBirth;
 
   this.date = function() {
-  //
-  // YOUR CODE GOES HERE
-  //
+    
+    var gigasecondDate = new Date(this.dateOfBirth.getTime() + 1000000000000);
+    return gigasecondDate;
+    }
+         
   };
-}
+
 
 module.exports = Gigasecond;
